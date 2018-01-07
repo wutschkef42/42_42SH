@@ -12,23 +12,23 @@
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *ct, size_t ct_size)
+t_list	*ft_lstnew(void const *data, size_t data_size)
 {
 	t_list	*new;
 
 	if (!(new = (t_list *)malloc(sizeof(t_list))))
 		return (NULL);
-	if (!ct)
+	if (!data)
 	{
-		new->ct = NULL;
-		new->ct_size = 0;
+		new->data = NULL;
+		new->data_size = 0;
 	}
 	else
 	{
-		if (!(new->ct = (void *)malloc(ct_size)))
+		if (!(new->data = (void *)malloc(data_size)))
 			return (NULL);
-		ft_memcpy(new->ct, ct, ct_size);
-		new->ct_size = ct_size;
+		ft_memcpy(new->data, data, data_size);
+		new->data_size = data_size;
 	}
 	new->next = NULL;
 	return (new);

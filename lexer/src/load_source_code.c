@@ -34,6 +34,7 @@ int		listLen(t_list *lst)
 	return (len);
 }
 
+
 static
 char	**dumpSourceCode2Tab(t_list *sourceCodeList)
 {
@@ -48,6 +49,7 @@ char	**dumpSourceCode2Tab(t_list *sourceCodeList)
 	if (!(sourceCodeTab = malloc(sizeof(char *) * rows + 1)))
 		return (NULL);
 	i = 0;
+//	ft_lstrev(&sourceCodeList);
 	while (sourceCodeList)
 	{
 		sourceCodeLine = (char*)(sourceCodeList->data);
@@ -57,6 +59,7 @@ char	**dumpSourceCode2Tab(t_list *sourceCodeList)
 		i++;
 		sourceCodeList = sourceCodeList->next;
 	}
+	sourceCodeTab[rows] = 0;
 	return (sourceCodeTab);
 }
 

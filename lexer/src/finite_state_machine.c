@@ -11,7 +11,7 @@
 #include "libft.h"
 
 /* State table maps (state, event) -> action procedure */
-void	(*const stateTable [MAX_STATES][MAX_EVENTS])(int) =
+void	(*const stateTable [MAX_STATES][MAX_EVENTS])(t_fsm *fsm, int c) =
 {
 	{ action_FindStartOfData_Newline, action_FindStartOfData_Whitespace,
 		action_FindStartOfData_Quote, action_FindStartOfData_Comma,
@@ -88,7 +88,7 @@ int		runStateMachine(char **sourceCode)
 	{
 		c = getNextChar(sourceCode, &pos);
 		fsm.eventType = getNewEvent(c);
-		stateTable[fsm.parserState][fsm.eventType](c);
+		stateTable[fsm.parserState][fsm.eventType](&fsm, c);
 	}
 	return (exitStateMachine(fsm));
 }

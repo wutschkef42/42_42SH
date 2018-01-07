@@ -4,6 +4,8 @@
 
 # define TOKEN_BUF_SIZE 1024
 
+# include <stdlib.h>
+
 /* define the states and events of the finite state machine. */
 typedef	enum {
 	STATE_FindStartOfData,
@@ -31,7 +33,7 @@ typedef enum {
 typedef struct		s_fsm
 {
 	char			currentToken[TOKEN_BUF_SIZE];
-	char			currentTokenLength;
+	size_t			currentTokenLength;
 	ParserState		parserState;
 	EventType		eventType;
 }					t_fsm;

@@ -9,7 +9,8 @@ int		main(void)
 	char	**sourceCodeTab;
 
 	sourceCodeTab = loadSourceCode();
-	runStateMachine(sourceCodeTab);
-	freeTab(sourceCodeTab);
+	printSourceCode(sourceCodeTab);
+	//runStateMachine(sourceCodeTab);
+//	freeTab(sourceCodeTab);
 	return (0);
 }

@@ -1,4 +1,5 @@
 
+#include "libft.h"
 
 void	freeList(t_list **lst)
 {
@@ -17,7 +18,6 @@ void	freeList(t_list **lst)
 
 void	freeTab(char **tab)
 {
-	char	**row;
 	int		i;
 
 	if (!tab || !*tab)

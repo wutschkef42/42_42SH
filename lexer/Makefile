@@ -3,7 +3,10 @@ NAME = 21sh.lexer
 
 SRC = main.c \
 		load_source_code.c \
+		print_source_code.c \
 		finite_state_machine.c \
+		get_new_event.c \
+		freedom.c \
 		action_procedures/action_utils.c \
 		action_procedures/check_end_of_string.c \
 		action_procedures/end_of_data.c \
@@ -13,6 +16,7 @@ SRC = main.c \
 		action_procedures/parse_error.c \
 		action_procedures/parse_number.c \
 		action_procedures/parse_string.c
+		
 
 SRCDIR = ./src
 OBJDIR = ./obj

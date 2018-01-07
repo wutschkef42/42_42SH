@@ -1,13 +1,15 @@
 
+#include "finite_state_machine.h"
+#include "libft.h"
 
-void		addCharToCurrentToken(int c)
+void		addCharToCurrentToken(t_fsm *fsm, int c)
 {
-	if (currentTokenLength < sizeof(currentToken))
-		currentToken[currentTOkenLength++] = (char)c;
+	if (fsm->currentTokenLength < sizeof(fsm->currentToken))
+		fsm->currentToken[fsm->currentTokenLength++] = (char)c;
 }
 
-void		printCurrentToken()
+void		printCurrentToken(t_fsm *fsm)
 {
-	printf("Token: [%.*s]\n", (int)currentTokenLength, currentToken);
-	currentTokenLength = 0;
+	ft_printf("Token: [%.*s]\n", (int)(fsm->currentTokenLength), fsm->currentToken);
+	fsm->currentTokenLength = 0;
 }

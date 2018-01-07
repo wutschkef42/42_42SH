@@ -2,10 +2,10 @@
 #ifndef PARSE_STRING_H
 # define PARSE_STRING_H
 
-void	action_ParseString_Newline();
-void	action_ParseString_Whitespace();
-void	action_ParseString_Quote();
-void	action_ParseString_Comma();
-void	action_ParseString_RegularChar();
+void	action_ParseString_Newline(t_fsm *fsm, int c);
+void	action_ParseString_Whitespace(t_fsm *fsm, int c);
+void	action_ParseString_Quote(t_fsm *fsm, int c);
+void	action_ParseString_Comma(t_fsm *fsm, int c);
+void	action_ParseString_RegularChar(t_fsm *fsm, int c);
 
 #endif
