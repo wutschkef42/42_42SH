@@ -10,6 +10,6 @@ void		addCharToCurrentToken(t_fsm *fsm, int c)
 
 void		printCurrentToken(t_fsm *fsm)
 {
-	ft_printf("Token: [%.*s]\n", (int)(fsm->currentTokenLength), fsm->currentToken);
+	ft_printf(">> Token (length: %2d):\t[%s]\n", (int)(fsm->currentTokenLength), fsm->currentToken);
 	fsm->currentTokenLength = 0;
 }

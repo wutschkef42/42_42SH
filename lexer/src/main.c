@@ -10,7 +10,7 @@ int		main(void)
 
 	sourceCodeTab = loadSourceCode();
 	printSourceCode(sourceCodeTab);
-	//runStateMachine(sourceCodeTab);
+	runStateMachine(sourceCodeTab);
 //	freeTab(sourceCodeTab);
 	return (0);
 }

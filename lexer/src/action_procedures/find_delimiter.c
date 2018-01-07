@@ -7,13 +7,15 @@ void	action_FindDelimiter_Newline(t_fsm *fsm, int c)
 {
 	(void) c;
 	ft_printf("------------------------------------------\n");
+//	ft_printf(">> Change ParserState: %s\n", "STATE_FindStartOfData");
 	fsm->parserState = STATE_FindStartOfData;
 }
 
 void	action_FindDelimiter_Whitespace(t_fsm *fsm, int c)
 {
 	(void) c;
-	(void) fsm;
+//	ft_printf(">> Change ParserState: %s\n", "STATE_FindStartOfToken");
+	fsm->parserState = STATE_FindStartOfToken;
 }
 
 void	action_FindDelimiter_Quote(t_fsm *fsm, int c)
@@ -26,6 +28,7 @@ void	action_FindDelimiter_Quote(t_fsm *fsm, int c)
 void	action_FindDelimiter_Comma(t_fsm *fsm, int c)
 {
 	(void) c;
+//	ft_printf(">> Change ParserState: %s\n", "STATE_FindStartOfToken");
 	fsm->parserState = STATE_FindStartOfToken;
 }
 

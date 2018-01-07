@@ -6,5 +6,6 @@ notes
 *.o
 a.out
 minishell
+21sh.lexer
 .DS_Store
 
